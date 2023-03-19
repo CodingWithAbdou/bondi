@@ -1,0 +1,259 @@
+:root {
+  --dark: #19283f;
+  --green: #33d1cc;
+  --red: #ff3150;
+  --orange: #ffc400;
+  --white: #fff;
+  --color-section: #eff7fa;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.btn-log {
+  background-color: var(--red);
+  color: var(--orange);
+  cursor: pointer;
+}
+.btn-log:hover {
+  color: var(--white);
+}
+
+.main-head::before {
+  content: "";
+  width: 140px;
+  height: 2px;
+  background-color: var(--green);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -70px;
+}
+
+/* start main */
+
+.navbar {
+  background-color: var(--dark);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar [aria-expanded="false"] {
+  border: 1px solid var(--white);
+}
+.navbar [aria-expanded="true"] {
+  border: 1px solid var(--green);
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.collapse svg {
+  border-left: 1px solid var(--green);
+  color: var(--green);
+}
+.collapse .navbar-nav .nav-item a.active,
+.collapse .navbar-nav .nav-item a:hover {
+  color: var(--green) !important;
+}
+@media (max-width: 991px) {
+  .collapse .navbar-nav .nav-item a:hover {
+    background-color: var(--green);
+    color: white !important;
+  }
+  .collapse .navbar-nav .nav-item:not(:last-child) a {
+    border-bottom: 1px solid var(--white);
+  }
+}
+.landing {
+  background-color: var(--dark);
+  min-height: calc(100vh - 60px);
+}
+@media (min-width: 992px) {
+  .landing {
+    min-height: calc(100vh - 68px);
+  }
+}
+.features .icons {
+  height: 200px;
+}
+.features .icons svg {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features h4 {
+  color: var(--orange);
+}
+.features .number {
+  font-size: 12rem;
+  color: var(--color-section);
+}
+.features .icon-two {
+  color: var(--green);
+}
+.work {
+  background-color: var(--color-section);
+}
+.work .type li {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.work .type li:hover:not(.active) {
+  color: var(--red);
+}
+.work .type .active {
+  background-color: var(--red);
+  color: var(--orange);
+}
+.work .image {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.work .image span {
+  width: calc(100% - 0.5rem);
+  height: calc(100% - 0.5rem);
+  background-color: hsl(178deg 63% 51% / 77%);
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.25rem;
+  left: calc(-100% - 0.25rem);
+  transition: 0.4s;
+  z-index: 99;
+}
+.work .image:hover span {
+  left: 0.25rem;
+}
+.work .more {
+  display: none;
+}
+.flew {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: hsl(216deg 43% 17% / 95%);
+  z-index: 1021;
+  transition: 0.3s;
+  left: -100%;
+}
+.flew.show {
+  left: 0;
+}
+.flew h3 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--orange);
+}
+.flew img {
+  width: 90%;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid var(--green);
+}
+@media (min-width: 768px) {
+  .flew img {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .flew img {
+    width: 58%;
+  }
+}
+.description p {
+  width: 50%;
+}
+.team {
+  background-color: var(--color-section);
+}
+.team h2 {
+  color: var(--orange);
+}
+.team h4 {
+  background-color: var(--green);
+}
+.team .container > p {
+  width: 60%;
+}
+.start-project {
+  background-color: var(--dark);
+}
+.blog .hide {
+  display: none;
+}
+.subscribe {
+  background-color: var(--orange);
+}
+.subscribe [placeholder="Enter Email Address"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe [placeholder="Enter Email Address"]:focus {
+  outline: none;
+}
+.subscribe [placeholder="Enter Email Address"]::placeholder {
+  color: white;
+  transition: 0.4s;
+}
+.subscribe [placeholder="Enter Email Address"]:focus::placeholder {
+  opacity: 0;
+}
+.subscribe [value="Subscribe"] {
+  background-color: var(--dark);
+  color: var(--orange);
+}
+.subscribe [value="Subscribe"]:hover {
+  color: var(--white);
+}
+footer {
+  background-color: var(--dark);
+}
+footer .capy span:first-child {
+  color: var(--green);
+}
+footer .capy span:last-child span {
+  color: var(--orange);
+}
+footer button {
+  background-color: var(--red) !important;
+  color: var(--orange) !important;
+}
+footer .contact-us li svg {
+  width: 24px;
+  height: 24px;
+}
+
+footer .contact-us .facebook {
+  background-color: #1877f2;
+}
+footer .contact-us .twitter {
+  background-color: #1da1f2;
+}
+footer .contact-us .linkedin {
+  background-color: #0077b5;
+}
+footer .contact-us .youtube {
+  background-color: #ff0000;
+}
+.bar {
+  height: 4px;
+  width: 100px;
+  position: sticky;
+  background-color: var(--orange);
+  z-index: 1020;
+  top: 60px;
+  transition: 0.1s;
+}
+@media (min-width: 992px) {
+  .bar {
+    top: 68px;
+  }
+}
